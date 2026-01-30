@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>ArbitrumDeFi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ethers v5 -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      padding: 20px;
+    }
+    button {
+      margin-top: 5px;
+      padding: 8px;
+    }
+    input {
+      padding: 6px;
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>ArbitrumDeFi</h1>
+
+  <p id="wallet">Wallet : non connecté</p>
+  <button onclick="connect()">Connect MetaMask</button>
+
+  <hr>
+
+  <h2>Stake</h2>
+  <input id="stakeAmount" type="number" placeholder="Montant">
+  <br>
+  <button onclick="stake()">Stake</button>
+
+  <h2>Claim</h2>
+  <button onclick="claim()">Claim rewards</button>
+
+  <h2>Unstake</h2>
+  <input id="unstakeAmount" type="number" placeholder="Montant">
+  <br>
+  <button onclick="unstake()">Unstake</button>
+
+  <!-- ⚠️ IMPORTANT : app.js à la racine -->
+  <script src="./app.js"></script>
+</body>
+</html>
